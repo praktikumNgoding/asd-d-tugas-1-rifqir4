@@ -1,5 +1,4 @@
 #include<iostream>
-#include<conio.h>
 using namespace std;
 struct poli{
 	int k;
@@ -159,5 +158,4 @@ int main(){
 		}
 		if(i<4)cout<<" + ";
 	}
-  getch();
 }
