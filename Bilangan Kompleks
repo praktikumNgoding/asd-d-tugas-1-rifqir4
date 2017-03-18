@@ -1,0 +1,44 @@
+#include<iostream>
+using namespace std;
+struct bil{
+	int r;
+	int i;
+};
+int main(){
+	float a,b,c,d;
+	bil kmp[2];
+	cout<<"Masukkan Bilangan kompleks pertama"<<endl;
+	cout<<"a = ";cin>>kmp[0].r;
+	cout<<"b = ";cin>>kmp[0].i;
+	cout<<"Masukkan Bilangan kompleks kedua"<<endl;
+	cout<<"c = ";cin>>kmp[1].r;
+	cout<<"d = ";cin>>kmp[1].i;
+	cout<<endl;
+	cout<<"Penjumlahan : ";
+	cout<<"("<<kmp[0].r<<" + "<<kmp[0].i<<"i) + ";
+	cout<<"("<<kmp[1].r<<" + "<<kmp[1].i<<"i)"<<endl;
+	cout<<"= ("<<kmp[0].r<<" + "<<kmp[1].r<<") + ("<<kmp[0].i<<" + "<<kmp[1].i<<")i"<<endl;
+	cout<<"= "<<kmp[0].r+kmp[1].r<<" + "<<kmp[0].i+kmp[1].i<<"i";
+	cout<<endl<<endl;
+	cout<<"Pengurangan : ";
+	cout<<"("<<kmp[0].r<<" + "<<kmp[0].i<<"i) - ";
+	cout<<"("<<kmp[1].r<<" + "<<kmp[1].i<<"i)"<<endl;
+	cout<<"= ("<<kmp[0].r<<" - "<<kmp[1].r<<") + ("<<kmp[0].i<<" - "<<kmp[1].i<<")i"<<endl;
+	cout<<"= "<<kmp[0].r-kmp[1].r<<" + "<<kmp[0].i-kmp[1].i<<"i";
+	cout<<endl<<endl;
+	cout<<"Perkalian : ";
+	cout<<"("<<kmp[0].r<<" + "<<kmp[0].i<<"i) * ";
+	cout<<"("<<kmp[1].r<<" + "<<kmp[1].i<<"i)"<<endl;
+	a=kmp[0].r*kmp[1].r; b=kmp[0].i*kmp[1].i; c=kmp[0].r*kmp[1].i; d=kmp[0].i*kmp[1].r;
+	cout<<"= ("<<a<<" - "<<b<<") + ("<<c<<" + "<<d<<")i"<<endl;
+	cout<<"= "<<a-b<<" + "<<c+d<<"i";
+	cout<<endl<<endl;
+	a=kmp[0].r; b=kmp[0].i; c=kmp[1].r; d=kmp[1].i;
+	cout<<"Pembagian :";
+	cout<<"("<<kmp[0].r<<" + "<<kmp[0].i<<"i) / ";
+	cout<<"("<<kmp[1].r<<" + "<<kmp[1].i<<"i)"<<endl;
+	cout<<"= [("<<a*c<<" + "<<b*d<<") / ("<<a*a<<" + "<<b*b<<")] + ";
+	cout<<" [("<<b*c<<" - "<<a*d<<") / ("<<c*c<<" + "<<d*d<<")]i"<<endl;
+	cout<<"= ("<<a*c+b*d<<" / "<<a*a+b*b<<") + ("<<b*c-a*d<<" / "<<c*c+d*d<<")i"<<endl;
+	cout<<"= "<<(a*c+b*d)/(a*a+b*b)<<" + "<<(b*c-a*d)/(c*c+d*d)<<"i";	
+}
