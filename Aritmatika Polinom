@@ -134,18 +134,29 @@ int main(){
 		}
 	}
 	cout<<endl<<" = ";
+	int b=0;
+	a=0;
 	for(int i=0;i<10;i++){
 		o=0;
 		for(int j=0;j<10;j++){
+			if(kali[i].k==5||kali[i].k==1){
+			o++; continue;}
 			if(i==j){
 			continue;}
 			if(kali[i].pang==kali[j].pang){
 				cout<<kali[i].k+kali[j].k<<"x^"<<kali[i].pang<<" + ";
-				o++;
+				o++;	
 			}
 		}
 		if(o==0){
-		cout<<kali[i].k<<"x^"<<kali[i].pang;if(i!=9)cout<<" + ";}
+		if(kali[i].h=="x" && kali[i].pang!=0 && kali[i].k!=1){
+			cout<<kali[i].k<<"x^"<<kali[i].pang;
+		}else if(kali[i].h=="x" && kali[i].pang!=0){
+			cout<<"x^"<<kali[i].pang;
+		} else{
+			cout<<kali[i].k;
+		}
+	if(i!=9)cout<<" + ";}
 	}
 	//P2'
 	cout<<endl<<endl;
